@@ -4,13 +4,20 @@
 using namespace std;
 
 void main() {
+    setlocale(LC_ALL, "Ukr");
 
     const int SIZE = 10;
     int arr[SIZE];
-    cout << "Vvedit elementy: " << endl;
+
+    cout << "Заповнiт массив: " << endl;
     for (int i = 0; i < SIZE; i++) {
         cout << "[" << i + 1 << "]" << ": ";
         cin >> arr[i];
+    }
+    cout << "Ваш массив: ";
+
+    for (int i = 0; i < 10; ++i) {
+        cout << arr[i] << " ";
     }
 
     int max = arr[0];
@@ -20,24 +27,21 @@ void main() {
             max = arr[i];
         }
     }
-    cout << "max element = " << max << endl;
+    cout << "\nНайбiльший елемент = " << max << endl;
 
-    int i = 0, j, x, h = 0;
+    int x, h = 0;
 
-    for (int g = 0; g < SIZE; g++)
+    for (int j = 0, g = 1; g < SIZE,j < SIZE; j++,g++)
     {
-        j = g + 1;
-        if (i < SIZE and j < SIZE)
-        {
-            x = arr[g] + arr[j];
+         x = arr[g] + arr[j];
 
-            if (x % 3 == 0 and x > max and x > 0)
-            {
-                h = h + 1;
-            }
-        }
+          if (x % 3 == 0 || x > max || x > 0)
+           {
+              h = h + 1;
+           }
+       
     }
-    cout << "kilkist elementiv = " << h << endl;
+    cout << "Кількість елементiв = " << h << endl;
 
     _getch();
 }
