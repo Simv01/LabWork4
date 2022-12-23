@@ -4,17 +4,17 @@
 using namespace std;
 
 void main() {
-    setlocale(LC_ALL, "Ukr");
+    
 
     const int SIZE = 10;
     int arr[SIZE];
 
-    cout << "Заповнiт массив: " << endl;
+    cout << "Fill the array: " << endl;
     for (int i = 0; i < SIZE; i++) {
         cout << "[" << i + 1 << "]" << ": ";
         cin >> arr[i];
     }
-    cout << "Ваш массив: ";
+    cout << "Your array: ";
 
     for (int i = 0; i < 10; ++i) {
         cout << arr[i] << " ";
@@ -27,7 +27,7 @@ void main() {
             max = arr[i];
         }
     }
-    cout << "\nНайбiльший елемент = " << max << endl;
+    cout << "\nThe max element = " << max << endl;
 
     int x, h = 0;
 
@@ -41,7 +41,7 @@ void main() {
            }
        
     }
-    cout << "Кількість елементiв = " << h << endl;
+    cout << "Number of elements = " << h << endl;//Кількість елементів
 
     _getch();
 }
