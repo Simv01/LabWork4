@@ -7,13 +7,9 @@ void main() {
     
 
     const int SIZE = 10;
-    int arr[SIZE];
+    int arr[SIZE] = { 6,9,5,7,3,9,7,2,5,3 };
 
-    cout << "Fill the array: " << endl;
-    for (int i = 0; i < SIZE; i++) {
-        cout << "[" << i + 1 << "]" << ": ";
-        cin >> arr[i];
-    }
+    
     cout << "Your array: ";
 
     for (int i = 0; i < 10; ++i) {
@@ -31,9 +27,9 @@ void main() {
 
     int x, h = 0;
 
-    for (int j = 0, g = 1; g < SIZE,j < SIZE; j++,g++)
+    for (int i = 0;i < SIZE; i++)
     {
-         x = arr[g] + arr[j];
+         x = arr[i+1] + arr[i];
 
           if (x % 3 == 0 || x > max || x > 0)
            {
